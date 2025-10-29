@@ -1,23 +1,29 @@
 #include <stdio.h>
+#include <string.h>
 
 
-int main(){
-    int n;
-    int a[100];
-    scanf("%d",&n);
-    for(int i =0; i<=n;i++){
-        scanf("%d",&a[i]);
-    }
-    int i=0;
-    if (n%2==0){
-        while (i<n/2){
-            if(a[i] - a[n-i]!=0){
-                printf("DAY KHONG PHAI LA DAY DOI XUNG");
-                break ;
-            }
-            
-
+int xaudoixung(char a[100]){
+    int l=0;
+    int r = strlen(a)-1;
+    
+    while(l <= r){
+        if (a[l] != a[r]){
+            return 0;
         }
+       l++;
+       r--;
     }
-
+    return 1;
 }
+int main(){
+    char a[100];
+    gets(a);
+    int check = xaudoixung(a);
+    if(check==0){
+        printf("Khong phai sau palindron");
+    }
+    else{
+        printf("sau palindron");
+    }
+}
+
