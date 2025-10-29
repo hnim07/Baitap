@@ -20,10 +20,11 @@ int main(){
     gets(a);
     int check = xaudoixung(a);
     if(check==0){
-        printf("Khong phai sau palindron");
+        printf("Khong phai xau palindrome");
     }
     else{
-        printf("sau palindron");
+        printf("xau palindrome");
     }
 }
+
 
